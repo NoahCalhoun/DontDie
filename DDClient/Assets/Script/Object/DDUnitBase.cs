@@ -9,6 +9,7 @@ public class DDUnitBase : DDObjectBase
     virtual public DDUnitType UnitType { get { return DDUnitType.None; } }
 
     public NavMeshAgent Agent;
+    public float MoveSpeed;
 
     void Awake()
     {
@@ -18,41 +19,86 @@ public class DDUnitBase : DDObjectBase
         //NavMesh.SamplePosition(new Vector3(30, 30, 0), out hit, float.PositiveInfinity, -1);
         //Agent.SetDestination(hit.position);
         //Agent.velocity = Agent.desiredVelocity;
+
+        Camera.main.gameObject.GetComponent<DDCamera>().SetTarget(TM);
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Agent.path.ClearCorners();
+        //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+        //    Physics.Raycast(ray, out hit, float.PositiveInfinity, -1);
+        //    Agent.SetDestination(hit.point);
+        //    Agent.updatePosition = true;
+        //}
+
+        //Agent.velocity = Agent.desiredVelocity;
+
+        Move(UpdateMoveDirection());
+    }
+
+    public void Move(DDMoveDirection direction)
+    {
+        if (direction == DDMoveDirection.Neutral)
+            return;
+
+        var angle = (float)direction;
+        var vecDir = Quaternion.Euler(0, angle, 0) * Vector3.forward;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(TM.position + vecDir * MoveSpeed * Time.deltaTime, out hit, float.PositiveInfinity, -1);
+        TM.position = hit.position;
+    }
+
+    public DDMoveDirection UpdateMoveDirection()
+    {
+        byte x = 0, y = 0;
+
+        if (Input.GetKey(KeyCode.W))
         {
-            Agent.path.ClearCorners();
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            Physics.Raycast(ray, out hit, float.PositiveInfinity, -1);
-            Agent.SetDestination(hit.point);
-            Agent.updatePosition = true;
+            y += 1;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            y -= 1;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            x -= 1;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            x += 1;
         }
 
-        Agent.velocity = Agent.desiredVelocity;
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (x == 0)
         {
-            Agent.updatePosition = false;
-            TM.Translate(0, 0, 1);
+            if (y == 0)
+                return DDMoveDirection.Neutral;
+            else if (y == 1)
+                return DDMoveDirection.Up;
+            else
+                return DDMoveDirection.Down;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (x == 1)
         {
-            Agent.updatePosition = false;
-            TM.Translate(0, 0, -1);
+            if (y == 0)
+                return DDMoveDirection.Right;
+            else if (y == 1)
+                return DDMoveDirection.UpRight;
+            else
+                return DDMoveDirection.DownRight;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else /*if (x == 255)*/
         {
-            Agent.updatePosition = false;
-            TM.Translate(-1, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Agent.updatePosition = false;
-            TM.Translate(1, 0, 0);
+            if (y == 0)
+                return DDMoveDirection.Left;
+            else if (y == 1)
+                return DDMoveDirection.UpLeft;
+            else
+                return DDMoveDirection.DownLeft;
         }
     }
 }
