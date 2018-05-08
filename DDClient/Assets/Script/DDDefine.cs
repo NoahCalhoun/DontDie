@@ -13,7 +13,7 @@ public enum DDMoveDirection
     Down = 180,
     DownLeft = 225,
     Left = 270,
-    UpLeft = 325,
+    UpLeft = 315,
 }
 
 public enum DDUnitType
@@ -27,5 +27,6 @@ public enum DDUnitType
 
 public static class DDDefine
 {
-    const float Root2 = 1.414213562373095f;
+    public const float Root2 = 1.414213562373095f;
+    public const int AreaAll = -1;
 }
