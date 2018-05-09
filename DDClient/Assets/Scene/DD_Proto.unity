@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 744703972}
   - component: {fileID: 744703971}
   - component: {fileID: 744703970}
+  - component: {fileID: 744703974}
   m_Layer: 0
   m_Name: World Camera
   m_TagString: MainCamera
@@ -417,6 +418,20 @@ Transform:
   m_Father: {fileID: 350572348}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &744703974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 744703969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66e18d2f81f00b4d90217aff9fe6c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+  Camera: {fileID: 744703972}
+  FollowFactor: 1
 --- !u!1 &1388779374
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,10 +440,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1388779375}
-  - component: {fileID: 1388779379}
+  - component: {fileID: 1388779377}
   - component: {fileID: 1388779376}
   m_Layer: 0
-  m_Name: Unit
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +484,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1388779379
+--- !u!114 &1388779377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -477,10 +492,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388779374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a99808412dc3b4db357a71a1cdb79b, type: 3}
+  m_Script: {fileID: 11500000, guid: 39071e0e76a69954ea4baba8045715dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: 1388779376}
+  MoveSpeed: 10
 --- !u!1 &1479209123
 GameObject:
   m_ObjectHideFlags: 0
