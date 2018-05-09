@@ -11,11 +11,14 @@ public abstract class DDUnitBase : DDObjectBase
     public NavMeshAgent Agent;
     public float MoveSpeed;
 
+    virtual public void InitUnit()
+    {
+        Agent = GetComponent<NavMeshAgent>();
+        MoveSpeed = 10;
+    }
+
     void Awake()
     {
-        NavMeshHit hit;
-        NavMesh.SamplePosition(TM.position, out hit, float.PositiveInfinity, DDDefine.AreaAll);
-        TM.position = hit.position;
     }
 
     void Update()
