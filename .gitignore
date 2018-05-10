@@ -323,6 +323,6 @@ sysinfo.txt
 *.unitypackage
 
 **/DDClient/Temp
-
+**/DDClient/Library/metadata
 
 # End of https://www.gitignore.io/api/unity,csharp
