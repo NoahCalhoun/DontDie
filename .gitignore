@@ -298,7 +298,7 @@ DDClient/[Tt]emp/
 DDClient/[Oo]bj/
 DDClient/[Bb]uild/
 DDClient/[Bb]uilds/
-/Assets/AssetStoreTools*
+DDClient/Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
 /.vs/
