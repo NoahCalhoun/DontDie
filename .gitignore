@@ -293,11 +293,11 @@ __pycache__/
 *.xsd.cs
 
 ### Unity ###
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
+DDClient/[Ll]ibrary/
+DDClient/[Tt]emp/
+DDClient/[Oo]bj/
+DDClient/[Bb]uild/
+DDClient/[Bb]uilds/
 /Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
@@ -321,8 +321,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-
-**/DDClient/Temp
-**/DDClient/Library/metadata
 
 # End of https://www.gitignore.io/api/unity,csharp
