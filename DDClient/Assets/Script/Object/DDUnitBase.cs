@@ -32,8 +32,14 @@ public abstract class DDUnitBase : DDObjectBase
 
         var angle = (float)direction;
         var vecDir = Quaternion.Euler(0, angle, 0) * Vector3.forward;
-        NavMeshHit hit;
-        NavMesh.SamplePosition(TM.position + vecDir * MoveSpeed * Time.deltaTime, out hit, float.PositiveInfinity, DDDefine.AreaAll);
-        TM.position = hit.position;
+        Agent.Move(vecDir * MoveSpeed * Time.deltaTime);
+    }
+
+    public void SetScale(float scale)
+    {
+        if (scale <= 0f)
+            return;
+
+        TM.localScale = new Vector3(scale, 1, scale);
     }
 }
