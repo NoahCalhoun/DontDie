@@ -20,6 +20,8 @@ public class WorldManager : MonoBehaviour
     {
         SpawnUnit(DDUnitType.Player, new Vector3(0, 0, 0));
         SpawnUnit(DDUnitType.Boss, new Vector3(0, 0, 20));
+        SpawnUnit(DDUnitType.NPC, new Vector3(5, 0, 0));
+        SpawnUnit(DDUnitType.NPC, new Vector3(-5, 0, 0));
     }
 
     // Update is called once per frame
@@ -46,6 +48,27 @@ public class WorldManager : MonoBehaviour
                     UnitDic.Add(DDUnitType.Player, new List<DDUnitBase>(1));
                     UnitDic[DDUnitType.Player].Add(player);
                     return player;
+                }
+
+            case DDUnitType.NPC:
+                {
+                    var npcObj = Instantiate(UnitPrefab);
+                    npcObj.name = "NPC";
+                    npcObj.GetComponentInChildren<MeshRenderer>().material.color = new Color(1, 1, 0);
+                    var npc = npcObj.AddComponent<DDNPC>();
+                    npc.InitUnit();
+                    npc.TM.SetParent(WorldRoot);
+                    PlaceOnGround(npc, position);
+                    if (UnitDic.ContainsKey(DDUnitType.NPC))
+                    {
+                        UnitDic[DDUnitType.NPC].Add(npc);
+                    }
+                    else
+                    {
+                        UnitDic.Add(DDUnitType.NPC, new List<DDUnitBase>());
+                        UnitDic[DDUnitType.NPC].Add(npc);
+                    }
+                    return npc;
                 }
 
             case DDUnitType.Boss:
