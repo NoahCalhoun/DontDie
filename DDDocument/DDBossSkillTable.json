@@ -1,0 +1,24 @@
+/*
+	skillUID : 스킬 UID 
+	name : 스킬이름
+	targetType : 0(논타겟), 1(타겟)
+	skillType : 1(불렛), 2(바닥),
+	skillAp : 스킬공격력
+	mp : 마나
+	moveSpeed :	공격속도(평타)(초)
+	time : 지속 시간
+
+*/
+
+[
+		{
+			"UID":1,
+			"name":"근접 평타 공격",
+			"targetType":0,
+			"skillType":1,
+			"skillAp":200,
+			"mp":50,
+			"moveSpeed":0,
+			"time":0
+		}
+]

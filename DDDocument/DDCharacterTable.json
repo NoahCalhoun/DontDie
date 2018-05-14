@@ -1,0 +1,61 @@
+/*
+	UID : 캐릭터 UID 
+	name : 이름
+	unitType : 0이면 아군 NPC, 1이면 보스 캐릭터(적),
+	maxHp :
+	ap : 평타 공격력
+	maxMp : 마나
+	mpRegenRate : 초당마나회복률(%)
+	attackSpeed : 공격속도(평타)(초)
+	moveSpeed 	: 이동속도(초)
+	attackRange : 공격사거리(1일때 근접평타)
+	blockRate	: 평타완전방어확률(%)
+	skillUID : NPC일경우 NPCSkillTable과 연동, 3개까지 입력.
+	
+
+*/
+
+[
+		{
+			"UID":1,
+			"name":"Boss Prototype1",
+			"unitType":1,
+			"maxHp":10000,
+			"ap":100,
+			"maxMp":100,
+			"mpRegenRate":10,
+			"attackSpeed":1,
+			"moveSpeed":3,
+			"attackRange":1,
+			"blockRate":0,
+			"skillUID":[]
+		},
+		{
+			"UID":1000,
+			"name":"Paladin",
+			"unitType":0,
+			"maxHp":1000,
+			"ap":10,
+			"maxMp":100,
+			"mpRegenRate":10,
+			"attackSpeed":3,
+			"moveSpeed":2,
+			"attackRange":1,
+			"blockRate":20,
+			"skillUID":[1,2,1000]
+		},
+		{
+			"UID":1001,
+			"name":"Hunter",
+			"unitType":0,
+			"maxHp":1000,
+			"ap":30,
+			"maxMp":100,
+			"mpRegenRate":10,
+			"attackSpeed":2,
+			"moveSpeed":2,
+			"attackRange":10,
+			"blockRate":0
+			"skillUID":[10,11,1000]
+		}
+]

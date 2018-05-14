@@ -1,0 +1,95 @@
+/*
+	skillUID : 스킬 UID 
+	name : 스킬이름
+	targetType : 0(논타겟), 1(타겟)
+	skillType : 0(패시브), 1(액티브)
+	skillAp : 스킬공격력
+	ccType : 상태이상타입. 0(없음), 1(스턴), 2(중독), 3(속박), 4(실명), 5(침묵), 6(공포)
+	mp : 마나
+	moveSpeed :	속도
+	castingTime : 캐스팅시간
+	coolTime : 스킬쿨타임
+	durationTime : 지속 시간
+
+*/
+
+[
+		{
+			"UID":1,
+			"name":"스턴",
+			"targetType":1,
+			"skillType":1,
+			"skillAp":50,
+			"ccType":1,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":10,
+			"durationTime":2
+		},
+		{
+			"UID":2,
+			"name":"속박",
+			"targetType":1,
+			"skillType":1,
+			"skillAp":50,
+			"ccType":1,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":10,
+			"durationTime":2
+		},
+		{
+			"UID":10,
+			"name":"독화살",
+			"targetType":0,
+			"skillType":4,
+			"skillAp":30,
+			"ccType":2,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":10,
+			"durationTime":5
+		},
+		{
+			"UID":11,
+			"name":"실명화살",
+			"targetType":0,
+			"skillType":1,
+			"skillAp":50,
+			"ccType":2,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":15,
+			"durationTime":3
+		},
+		{
+			"UID":1000,
+			"name":"방패의 벽",
+			"targetType":0,
+			"skillType":0,
+			"skillAp":0,
+			"ccType":0,
+			"mp":20,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":20,
+			"durationTime":2
+		},
+		{
+			"UID":1001,
+			"name":"죽은척",
+			"targetType":0,
+			"skillType":0,
+			"skillAp":0,
+			"ccType":0,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":0,
+			"coolTime":60,
+			"durationTime":2
+		}
+]
