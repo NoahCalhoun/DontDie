@@ -11,6 +11,7 @@
 	attackRange : 공격사거리(1일때 근접평타)
 	blockRate	: 평타완전방어확률(%)
 	skillUID : NPC일경우 NPCSkillTable과 연동, 3개까지 입력.
+			   Boss일 경우 ConditionUID입력, 컨디션 개수만큼 입력.
 	
 
 */
@@ -56,6 +57,6 @@
 			"moveSpeed":2,
 			"attackRange":10,
 			"blockRate":0
-			"skillUID":[10,11,1000]
+			"skillUID":[10,11,1001]
 		}
 ]
