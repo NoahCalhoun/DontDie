@@ -49,7 +49,7 @@
 			"UID":1001,
 			"name":"Hunter",
 			"unitType":0,
-			"maxHp":1000,
+			"maxHp":500,
 			"ap":30,
 			"maxMp":100,
 			"mpRegenRate":10,
@@ -58,5 +58,33 @@
 			"attackRange":10,
 			"blockRate":0
 			"skillUID":[10,11,1001]
+		},
+		{
+			"UID":1002,
+			"name":"Thief",
+			"unitType":0,
+			"maxHp":500,
+			"ap":50,
+			"maxMp":100,
+			"mpRegenRate":10,
+			"attackSpeed":1,
+			"moveSpeed":2,
+			"attackRange":1,
+			"blockRate":0
+			"skillUID":[12,1,1001]
+		},
+		{
+			"UID":1002,
+			"name":"Wizard",
+			"unitType":0,
+			"maxHp":300,
+			"ap":40,
+			"maxMp":100,
+			"mpRegenRate":20,
+			"attackSpeed":2,
+			"moveSpeed":2,
+			"attackRange":10,
+			"blockRate":0
+			"skillUID":[12,1,1001]
 		}
 ]

@@ -4,7 +4,7 @@
 	targetType : 0(논타겟), 1(타겟)
 	skillType : 0(패시브), 1(액티브)
 	skillAp : 스킬공격력
-	ccType : 상태이상타입. 0(없음), 1(스턴), 2(중독), 3(속박), 4(실명), 5(침묵), 6(공포)
+	ccType : 상태이상타입. 0(없음), 1(스턴), 2(중독),3(출혈), 4(속박), 5(실명), 6(침묵), 7(슬로우), 8(공포)
 	mp : 마나
 	moveSpeed :	속도
 	castingTime : 캐스팅시간
@@ -59,6 +59,19 @@
 			"targetType":0,
 			"skillType":1,
 			"skillAp":50,
+			"ccType":5,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":15,
+			"durationTime":3
+		},
+		{
+			"skillUID":12,
+			"name":"맹독",
+			"targetType":1,
+			"skillType":1,
+			"skillAp":10,
 			"ccType":2,
 			"mp":50,
 			"moveSpeed":0,
@@ -67,17 +80,30 @@
 			"durationTime":3
 		},
 		{
+			"skillUID":13,
+			"name":"시간왜곡",
+			"targetType":0,
+			"skillType":1,
+			"skillAp":0,
+			"ccType":2,
+			"mp":50,
+			"moveSpeed":0,
+			"castingTime":1,
+			"coolTime":30,
+			"durationTime":3
+		},
+		{
 			"skillUID":1000,
-			"name":"방패의 벽",
+			"name":"헌신의 오라",
 			"targetType":0,
 			"skillType":0,
 			"skillAp":0,
 			"ccType":0,
-			"mp":20,
+			"mp":0,
 			"moveSpeed":0,
-			"castingTime":1,
+			"castingTime":0,
 			"coolTime":20,
-			"durationTime":2
+			"durationTime":0
 		},
 		{
 			"skillUID":1001,
@@ -86,10 +112,36 @@
 			"skillType":0,
 			"skillAp":0,
 			"ccType":0,
-			"mp":50,
+			"mp":10,
 			"moveSpeed":0,
 			"castingTime":0,
 			"coolTime":60,
-			"durationTime":2
+			"durationTime":3
+		},
+		{
+			"skillUID":1002,
+			"name":"독의 대가",
+			"targetType":0,
+			"skillType":0,
+			"skillAp":10,
+			"ccType":0,
+			"mp":10,
+			"moveSpeed":0,
+			"castingTime":0,
+			"coolTime":60,
+			"durationTime":3
+		},
+		{
+			"skillUID":1003,
+			"name":"마나 폭발",
+			"targetType":0,
+			"skillType":0,
+			"skillAp":0,
+			"ccType":0,
+			"mp":10,
+			"moveSpeed":0,
+			"castingTime":0,
+			"coolTime":0,
+			"durationTime":0
 		}
 ]
