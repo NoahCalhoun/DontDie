@@ -15,7 +15,7 @@
 
 [
 		{
-			"UID":1,
+			"skillUID":1,
 			"name":"스턴",
 			"targetType":1,
 			"skillType":1,
@@ -28,7 +28,7 @@
 			"durationTime":2
 		},
 		{
-			"UID":2,
+			"skillUID":2,
 			"name":"속박",
 			"targetType":1,
 			"skillType":1,
@@ -41,7 +41,7 @@
 			"durationTime":2
 		},
 		{
-			"UID":10,
+			"skillUID":10,
 			"name":"독화살",
 			"targetType":0,
 			"skillType":4,
@@ -54,7 +54,7 @@
 			"durationTime":5
 		},
 		{
-			"UID":11,
+			"skillUID":11,
 			"name":"실명화살",
 			"targetType":0,
 			"skillType":1,
@@ -67,7 +67,7 @@
 			"durationTime":3
 		},
 		{
-			"UID":1000,
+			"skillUID":1000,
 			"name":"방패의 벽",
 			"targetType":0,
 			"skillType":0,
@@ -80,7 +80,7 @@
 			"durationTime":2
 		},
 		{
-			"UID":1001,
+			"skillUID":1001,
 			"name":"죽은척",
 			"targetType":0,
 			"skillType":0,

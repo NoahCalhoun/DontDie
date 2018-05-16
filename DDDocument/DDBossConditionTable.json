@@ -1,9 +1,9 @@
 /*
-	bossUID : 보스 UID (CharacterTable과 연동)
+	conditionUID : UID 
 */
 
 [
 		{
-			"bossUID":1
+			"conditionUID":1
 		}
 ]
